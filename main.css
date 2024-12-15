@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center; /* deixará tudo centralizado */
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #c8d6d5;
+    padding: 24px 0; /* o primeiro número serve para separar em cima e embaixo, o 0 é para as laterais*/
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input,
+button {
+    padding: 8px;
+}
+
+button {
+    background-color: #009432;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    cursor:pointer /* muda o cursor para a mãozinha */
+
+}
+
+#cancelar {
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap; /* quando chegar ao limite e ocupar toda tela irá criar uma nova linha */
+}
+
+ul li {
+    max-width: 25%;  /* por ser 4 itens então será 25% */
+    list-style: none; /* tira os pontos do li que fica */
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden; /* todo conteúdo que ultrapassar o limite do max-height não será exibido e ficam todas as imagens em um tamanho uniforme */
+}
+
+ul li img {
+    width: 100%;  /* fará uma  imagem não ficar sobre a outra */
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: all ease .5s; /* transição para aparecer a legenda da foto*/
+}
+
+.overlay-imagem-link a {
+    text-decoration: none; /*tira o underline (a linha que fica embaixo das pelavras*/
+}
+
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
+}
+
